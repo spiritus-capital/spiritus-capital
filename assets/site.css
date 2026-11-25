@@ -100,16 +100,18 @@ nav.main a[aria-current="page"]{color:var(--gold-light)}
 .burger[aria-expanded="true"] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger[aria-expanded="true"] i:nth-child(2){opacity:0}
 .burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+nav.main a.nav-access{display:none}
+.struct:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
 .progress{position:fixed;top:0;left:0;height:1px;width:100%;background:var(--gold-light);transform:scaleX(0);transform-origin:left;z-index:70}
-@media (max-width:1120px){
-  nav.main{position:fixed;inset:80px 0 auto 0;flex-direction:column;gap:0;background:var(--oxblood-deep);padding:12px var(--gut) 32px;border-bottom:1px solid var(--line-dark);clip-path:inset(0 0 100% 0);transition:clip-path .6s var(--ease);visibility:hidden}
+@media (max-width:1160px){
+  nav.main{position:fixed;inset:80px 0 auto 0;max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain;flex-direction:column;gap:0;background:var(--oxblood-deep);padding:12px var(--gut) 32px;border-bottom:1px solid var(--line-dark);clip-path:inset(0 0 100% 0);transition:clip-path .6s var(--ease);visibility:hidden}
   nav.main.open{clip-path:inset(0 0 0 0);visibility:visible}
   nav.main a{padding:16px 0;border-bottom:1px solid var(--line-dark);font-size:13px}
   nav.main a::after{display:none}
   .burger{display:block}
   .hbar{height:80px}
 }
-@media (max-width:560px){:root{--gut:22px}.access{display:none}}
+@media (max-width:560px){:root{--gut:22px}.access{display:none}nav.main a.nav-access{display:block;color:var(--gold-light)}}
 
 /* ── Heroes ── */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:150px;overflow:hidden}
@@ -319,3 +321,6 @@ svg.crest{display:block;height:auto;aspect-ratio:4/3;overflow:visible}
   body{font-size:16px}.lead{font-size:18.5px}
   .btn{letter-spacing:.14em;padding:0 20px;gap:12px;font-size:12px}.btn::after{width:16px}
 }
+
+.article .head a{color:inherit;text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-size:0 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .5s var(--ease)}
+.article .head a:hover,.article .head a:focus-visible{background-size:100% 1px}
