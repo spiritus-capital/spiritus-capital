@@ -23,7 +23,7 @@
 <link rel="preload" href="/assets/fonts/cinzel-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/cormorant-400i.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/sourceserif-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611251955">
+<link rel="stylesheet" href="/assets/site.css?v=202611252045">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -76,7 +76,8 @@
       <div class="block-line" style="margin-top:40px"><p class="title">Confidential investment materials</p><p class="body">Materials are shared with eligible investors following the appropriate review and confidentiality arrangements.</p><p style="margin-top:14px"><a class="go" href="/investor-access/">About investor access</a></p></div>
       <div class="block-line"><p class="title">Business owners &amp; partners</p><p class="body">For whisky-asset or hotel acquisitions, hospitality operating partnerships, or the Rosslyn Distillery project, select “Strategic partnership” in the enquiry form.</p></div>
     </div>
-    <form class="form" id="enquiry" data-endpoint="" novalidate data-r style="--d:.12s">
+    <form class="form" id="enquiry" data-endpoint="/api/enquiry" novalidate data-r style="--d:.12s">
+      <div class="hp" aria-hidden="true"><label for="f-website">Leave this field empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
       <div><label for="f-name">Full name *</label><input id="f-name" required autocomplete="name"></div>
       <div><label for="f-email">Email address *</label><input id="f-email" type="email" required autocomplete="email"></div>
       <div><label for="f-firm">Firm / family office</label><input id="f-firm" autocomplete="organization"></div>
@@ -108,6 +109,6 @@
     <div class="row"><span>© 2026 SPIRITUS Capital · SPIRITUS UK Holdings Limited (SC901738)</span><a href="/legal/">Legal &amp; privacy</a></div>
   </div>
 </footer>
-<script src="/assets/site.js?v=202611251955" defer></script>
+<script src="/assets/site.js?v=202611252045" defer></script>
 </body>
 </html>

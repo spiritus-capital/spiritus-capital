@@ -26,7 +26,7 @@
     if(!form.checkValidity()){m.textContent='Please complete the required fields and confirm consent.';var bad=form.querySelector(':invalid');if(bad)bad.focus();return;}
     var g=function(id){var el=document.getElementById('f-'+id);return el?el.value.trim():''};
     var typeEl=document.getElementById('f-type');var type=typeEl?typeEl.options[typeEl.selectedIndex].text:'';
-    var data={name:g('name'),email:g('email'),firm:g('firm'),country:g('country'),type:type,message:g('msg'),consent:true,_subject:'SPIRITUS enquiry: '+type+' from '+g('name')};
+    var data={name:g('name'),email:g('email'),firm:g('firm'),country:g('country'),type:type,message:g('msg'),consent:true,website:g('website'),_subject:'SPIRITUS enquiry: '+type+' from '+g('name')};
     var mail=function(){var body='Name: '+data.name+'\nEmail: '+data.email+'\nFirm / family office: '+data.firm+'\nCountry: '+data.country+'\nNature of enquiry: '+type+'\n\n'+data.message;
       window.location.href='mailto:ir@spiritus.capital?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(body);
       m.textContent='Your email app has opened with your enquiry addressed to ir@spiritus.capital. Please press Send to complete it.';};
